@@ -1,7 +1,10 @@
 # Terraform-and-Ansible
 created multiple instances by using terraform and connected it through Elastic IP address and generated ping massages through ansible.
+
 take Comand Prompt 
-Install terraform
+
+take new webpage and type Install terraform choose linux and select amzon linux server copy and paste below comands in comand prompt
+
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum -y install terraform

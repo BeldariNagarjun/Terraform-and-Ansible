@@ -6,9 +6,13 @@ take Comand Prompt
 take new webpage and type Install terraform choose linux and select amzon linux server copy and paste below comands in comand prompt
 
 sudo yum install -y yum-utils
+
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+
 sudo yum -y install terraform
+
 mkdir terraform_scripts
+
 cd terraform
 
 create IAM User and give full access of EC2 and create access_key and security_key 
@@ -20,6 +24,7 @@ provider "aws" {
   region     = "ap-south-1"
 }
 esc :wq --press enter
+
 
 vi main.tf
 resource "aws_instance" "node_1" {
@@ -40,16 +45,26 @@ resource "aws_instance" "node_2" {
 }
 esc :wq --press enter
 
+
 terraform init
+
 terraform fmt
+
 terraform validate
+
 terraform plan
+
 terraform apply
 
+
 mkdir ansibe
+
 cd ansible
+
 yum install pip
+
 pip install ansible
+
 vi host
 [ansible_server]
 node_1 ansible_host=192.138.8.117
@@ -60,6 +75,8 @@ ansible_python_interpreter=/usr/bin/python3
 esc :wq --press enter
 
 cd .ssh
+
+
 vi ansible_key
 -----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEA13YxqkXXhJBzt8P07jcoeMkqoD2IgQ1Ye14G4j/5FBbWpCui
@@ -88,12 +105,18 @@ LcBnfwKBgBg5xaHzOzsn/RoHAAlAyRtUJTbdexTyY6skR157p4G1o7Y+3ALpGtwV
 vx6juHHLeD/nUrvnQMycVU7dUL9SAdi/7cZnrAlv2vku5NG5/ztrq1aAGr5cFchK
 asRsVgNXWu7QTKqiShfRGRYtusWuWWYHqSx+GnbOGCxnRR2iV4Yt
 -----END RSA PRIVATE KEY-----
+
 esc :wq --press enter
+
 
 ansible all -m ping
 
+
 ansible all -m ping -i /home/ec2-user/ansible/host
+
 yes
+
 yes
+
 
 ansible all -m ping -i /home/ec2-user/ansible/host --private-key=/home/ec2-user/.ssh/ansible_key

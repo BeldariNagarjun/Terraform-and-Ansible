@@ -19,6 +19,7 @@ cd terraform
 create IAM User and give full access of EC2 and create access_key and security_key 
 
 vi provider.tf
+
 provider "aws" {
   access_key = "paste it here"
   secret_key = "paste it here"
@@ -29,6 +30,7 @@ esc :wq --press enter
 
 
 vi main.tf
+
 resource "aws_instance" "node_1" {
   count                  = "1"
   ami                    = "ami-02b49a24cfb95941c"

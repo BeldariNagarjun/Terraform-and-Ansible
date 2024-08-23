@@ -1,4 +1,5 @@
 # Terraform-and-Ansible
+
 created multiple instances by using terraform and connected it through Elastic IP address and generated ping massages through ansible.
 
 take Comand Prompt 
@@ -23,6 +24,7 @@ provider "aws" {
   secret_key = "paste it here"
   region     = "ap-south-1"
 }
+
 esc :wq --press enter
 
 
@@ -43,6 +45,7 @@ resource "aws_instance" "node_2" {
   subnet_id              = "subnet-07d4c408a9436e199"
   vpc_security_group_ids = ["sg-099df5061091c610d"]
 }
+
 esc :wq --press enter
 
 

@@ -83,6 +83,8 @@ cd .ssh
 
 
 vi ansible_key
+
+
 -----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEA13YxqkXXhJBzt8P07jcoeMkqoD2IgQ1Ye14G4j/5FBbWpCui
 1VpJwwTOwwm27hwc3dqXYdlf6VbBHBmNiAZgy+4Z+0wzfvpm+gQ5c3T72Syi5Au5
